@@ -1,7 +1,12 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import ServiceCard from '../ServiceCard/ServiceCard';
 
 
 const Home = () => {
+    const services = useLoaderData();
+    console.log(services)
+
     return (
         <div className='sm:w-3/4 w-3/5 mx-auto'>
             <section className="text-gray-600 body-font">
@@ -17,14 +22,14 @@ const Home = () => {
             </section>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-8 mx-auto">
-                    {/* <div className="flex flex-wrap -m-4">
+                    <div className="flex flex-wrap -m-4">
                         {
-                            courses.map(course => <CourseCard
-                                key={course.id}
-                                course={course}
-                            ></CourseCard>)
+                            services.map(service => <ServiceCard
+                                key={service._id}
+                                service={service}
+                            ></ServiceCard>)
                         }
-                    </div> */}
+                    </div>
                 </div>
             </section>
         </div>
