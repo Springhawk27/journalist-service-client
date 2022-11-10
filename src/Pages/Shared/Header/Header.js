@@ -44,6 +44,13 @@ const Header = () => {
                         {
                             user?.uid ?
                                 <>
+                                    <Link
+                                        to='/myreviews'
+                                        className="mr-2 "
+                                    >My Reviews</Link>
+                                    <Link to='/addservice'
+                                        className="mr-2 "
+                                    >Add Service</Link>
                                     <span className='mr-4 sm:ml-12 ml-4'>{user?.displayName}</span>
                                     <button className="btn btn-outline" onClick={handleLogOut}>Log Out</button>
 
