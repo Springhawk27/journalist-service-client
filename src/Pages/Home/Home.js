@@ -12,8 +12,8 @@ const Home = () => {
             <section className="text-gray-600 body-font">
                 <div className="container px-5 pt-8 mx-auto">
                     <div className="text-center mb-20">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font text-blue-900 mb-4">Check out my available services</h1>
-                        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">With my services you will get whatever you want no time</p>
+                        <h1 className="sm:text-3xl text-2xl font-medium title-font text-purple-900 mb-4">Check out my available services</h1>
+                        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s"> You always will get the best  output whatever and whenever you want in no time</p>
                         <div className="flex mt-6 justify-center">
                             <div className="w-16 h-1 rounded-full bg-blue-900 inline-flex"></div>
                         </div>
@@ -30,9 +30,9 @@ const Home = () => {
                             ></ServiceCard>)
                         }
                     </div>
-                    <Link to="/services" className="flex justify-center mt-2">
-                        < button className="inline-flex text-white bg-black border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
-                            See All</button>
+                    <Link to="/services" className="flex justify-center mt-4">
+                        < button className="inline-flex text-white bg-purple-900 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
+                            See All Services</button>
                     </Link>
                 </div>
             </section>

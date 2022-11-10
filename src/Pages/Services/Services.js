@@ -10,7 +10,14 @@ const Services = () => {
             <section className="text-gray-600 body-font">
                 <div className="container px-5 pt-8 mx-auto">
                     <div className="flex flex-col text-center w-full mb-1">
-                        <h1 className="sm:text-2xl text-xl font-medium title-font mb-1 text-black">Total {services.length} services available </h1>
+
+                    </div>
+                    <div className="text-center mb-8">
+                        <h1 className="sm:text-2xl text-xl font-medium title-font mb-1 text-black">Total {services.length} Services Available </h1>
+                        <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s"> You always will get the best  output whatever and whenever you want in no time</p>
+                        <div className="flex mt-6 justify-center">
+                            <div className="w-16 h-1 rounded-full bg-blue-900 inline-flex"></div>
+                        </div>
                     </div>
                 </div>
             </section>
