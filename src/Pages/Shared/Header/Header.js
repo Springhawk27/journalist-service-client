@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
+
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <header className="body-font bg-gray-200  sticky top-0 z-10" >
             {/* className={`body-font bg-gray-100  sticky top-0 z-10 ${theme === true ? "bg-gray-100" : theme === false ? "bg-blue-300" : "bg-red-100"}`} */}
@@ -28,29 +38,15 @@ const Header = () => {
                         to="/blog"
                         className="mr-5 hover:text-blue-900">Blog</Link>
 
-                    <div className="flex flex-wrap gap-2">
-
-                        {/* <div>
-                            <Button
-                                color="light"
-                                pill={true}
-                                onClick={() => {
-                                    setTheme(theme === false ? true : theme === true ? false : true)
-                                }}
-                            >
-                                Theme
-                            </Button>
-                        </div> */}
-                    </div>
 
 
-
-                    {/* <>
+                    <>
                         {
                             user?.uid ?
                                 <>
                                     <span className='mr-4 sm:ml-12 ml-4'>{user?.displayName}</span>
-                                    <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                    <button className="btn btn-outline" onClick={handleLogOut}>Log Out</button>
+
                                 </>
                                 :
                                 <>
@@ -63,12 +59,9 @@ const Header = () => {
                                     >Register</Link>
                                 </>
                         }
-                    </> */}
-                    {/* 
-                    <Tooltip
-                        content={user?.displayName ? `Hello, ${user?.displayName} ` : "Hello"}
-                        animation="duration-500"
-                        placement="left"
+                    </>
+                    <div className="tooltip  tooltip-bottom"
+                        data-tip={user?.displayName ? `Hello, ${user?.displayName} ` : "Hello"}
                     >
                         <Link to="/profile">
                             {user?.photoURL ?
@@ -81,7 +74,7 @@ const Header = () => {
                                 : <FaUser></FaUser>
                             }
                         </Link>
-                    </Tooltip> */}
+                    </div>
                 </nav>
 
 
