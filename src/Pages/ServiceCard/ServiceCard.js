@@ -20,7 +20,10 @@ const ServiceCard = ({ service }) => {
                     <span className='ml-2 mr-4'>{rating.number}</span>
                     <span className="">${price}</span>
                 </div>
-                <Link to={`/service/${_id}`} className="flex justify-center mt-2 ">
+                <div className='flex  justify-start items-center'>
+                    <span className="">{description.slice(0, 100) + '...'}</span>
+                </div>
+                <Link to={`/services/${_id}`} className="flex justify-center mt-2 ">
                     < button className="inline-flex text-white text-center bg-black border-0 py-2 px-4 justify-center focus:outline-none hover:bg-green-600 rounded text-lg w-full">
                         Service Detail</button>
                 </Link>
