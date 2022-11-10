@@ -1,11 +1,11 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ServiceCard from '../ServiceCard/ServiceCard';
 
 
 const Home = () => {
     const services = useLoaderData();
-    console.log(services)
+    // console.log(services)
 
     return (
         <div className='sm:w-3/4 w-3/5 mx-auto'>
@@ -24,12 +24,16 @@ const Home = () => {
                 <div className="container px-5 py-8 mx-auto">
                     <div className="flex flex-wrap -m-4">
                         {
-                            services.map(service => <ServiceCard
+                            services.slice(0, 3).map(service => <ServiceCard
                                 key={service._id}
                                 service={service}
                             ></ServiceCard>)
                         }
                     </div>
+                    <Link to="/services" className="flex justify-center mt-2">
+                        < button className="inline-flex text-white bg-black border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
+                            See All</button>
+                    </Link>
                 </div>
             </section>
         </div>
