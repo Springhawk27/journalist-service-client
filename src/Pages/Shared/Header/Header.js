@@ -11,7 +11,7 @@ const Header = () => {
 
                     <img src={logo} alt="" style={{ width: '100px' }} />
 
-                    <span className="ml-3 text-xl text-blue-900">Newsroom Psithurism</span>
+
                 </Link>
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                     <Link
